@@ -220,4 +220,6 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-
+# Fix tap to pay from the N5 dump
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
